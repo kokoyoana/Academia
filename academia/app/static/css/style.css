@@ -1,22 +1,6 @@
 .navbar{
      background-color: #10346A; 
 }
-.acceso{
-    margin-left: 280px; 
-}
-.nav-item{
-    color: white;
-}
-.navbaritem{
-    margin-left: 25px;
-    font-size: 30px;   
-}
-.dropdown-toggle{
-    color:white;
-}
-
-
-
 
 .login {
   display: inline-block;
@@ -52,4 +36,3 @@
     background-color: rgb(12, 108, 242);
     line-height: 2.5rem;
 }
-
