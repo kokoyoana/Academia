@@ -13,69 +13,60 @@
 </head>
 
 <body>
-    <div>
-        
-      <nav class="navbar navbar-expand-lg estilo">
- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="
-    color: red;
-    background-color: red;
-">
-      <span class="lnr lnr-menu"></span>
-  </button>
- <div class="col-2 logo ">
-          <a href=""><img class="mx-auto mb-3 logoIMG" src="/academia/app/static/img/logoacademia.PNG"
-              alt="logo" /></a>
-        </div>
-         
-  <div class="collapse navbar-collapse beOYwp flex-container" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Cursos
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
+    <div class="bs-example">
+        <nav class="navbar navbar-expand-md">
+            <a href="#" class="navbar-brand">
+                <img src="{% static 'img/logoacademia.png' %}" height="180" width="250px;" alt="CoolBrand" />
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse"
+                style="color: rgb(46, 37, 37); background-color: rgb(243, 154, 11)">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-      </li>
-     
-      
-    </ul>
-    <div class="Header__NavInner-ra9ecu-2 jbqrRB">
-                    <div class="ButtonGroup-z74grn-0 eZpsrd">
-                        <a class="Link__CustomLink-sc-1p80yfz-0 bCfMzW"
-                            href="https://login.blockchain.com/#/login?utm_campaign=dcomnav_login"><button type="submit"
-                                class="Button__DefaultButton-sc-1e82yhp-0 lktbhK" aria-label="Login"
-                                href="https://login.blockchain.com/#/login?utm_campaign=dcomnav_login">
-                                Log In
-                            </button></a><a class="Link__CustomLink-sc-1p80yfz-0 bCfMzW"
-                            href="https://login.blockchain.com/#/signup?showWallet?utm_campaign=dcomnav_signup"><button
-                                type="submit" class="Button__DefaultButton-sc-1e82yhp-0 enZPoY" aria-label="Sign Up"
-                                href="https://login.blockchain.com/#/signup?showWallet?utm_campaign=dcomnav_signup">
-                                Sign Up
-                            </button></a>
+            <div class="collapse navbar-collapse .nav-fill" id="navbarCollapse">
+                <div class="navbar-nav navbaritem ">
+                    <li class="nav-item nav-link active">Academia</li>
+                    <li class="nav-item dropdown show">
+                        <a class="nav-link dropdown-toggle" href="#" id="" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="true">
+                            Cursos
+                        </a>
+                        <ul class=" dropdown-menu show">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li class="divider" role="separator"></li>
+
+                            <li><a class="dropdown-item" href="#">Separated link</a></li>
+                            <li class="divider" role="separator"></li>
+                            <li><a class="dropdown-item" href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-link active">Contacto</li></a>
+
+                </div>
+
+                <div class="navbar-nav">
+                    <div class="Header__NavInner-ra9ecu-2 jbqrRB">
+                        <div class="ButtonGroup-z74grn-0 acceso">
+                            <a class="Link__CustomLink-sc-1p80yfz-0 bCfMzW"
+                                href="https://login.blockchain.com/#/login?utm_campaign=dcomnav_login"><button
+                                    type="submit" class="Button__DefaultButton-sc-1e82yhp-0 login" aria-label="Login"
+                                    href="https://login.blockchain.com/#/login?utm_campaign=dcomnav_login">
+                                    Log In
+                                </button></a><a class="Link__CustomLink-sc-1p80yfz-0 bCfMzW"
+                                href="https://login.blockchain.com/#/signup?showWallet?utm_campaign=dcomnav_signup"><button
+                                    type="submit" class="Button__DefaultButton-sc-1e82yhp-0 SignUp" aria-label="Sign Up"
+                                    href="https://login.blockchain.com/#/signup?showWallet?utm_campaign=dcomnav_signup">
+                                    Sign Up
+                                </button></a>
+                        </div>
                     </div>
                 </div>
-  </div>
-</nav>
-   </div>
-              
-            
-               
-              
-                
-       
-       
-  
+            </div>
+        </nav>
+    </div>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js "></script>
