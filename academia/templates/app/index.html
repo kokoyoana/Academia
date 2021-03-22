@@ -1,1 +1,83 @@
-{% extends "app/base.html" %} {% load static %} {% block body %} {% endblock %}
+{% load static %} {% load bootstrap4 %} {% load static i18n %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Academia</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+</head>
+
+<body>
+    <div>
+        
+      <nav class="navbar navbar-expand-lg estilo">
+ <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="
+    color: red;
+    background-color: red;
+">
+      <span class="lnr lnr-menu"></span>
+  </button>
+ <div class="col-2 logo ">
+          <a href=""><img class="mx-auto mb-3 logoIMG" src="/academia/app/static/img/logoacademia.PNG"
+              alt="logo" /></a>
+        </div>
+         
+  <div class="collapse navbar-collapse beOYwp flex-container" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      
+    </ul>
+    <div class="Header__NavInner-ra9ecu-2 jbqrRB">
+                    <div class="ButtonGroup-z74grn-0 eZpsrd">
+                        <a class="Link__CustomLink-sc-1p80yfz-0 bCfMzW"
+                            href="https://login.blockchain.com/#/login?utm_campaign=dcomnav_login"><button type="submit"
+                                class="Button__DefaultButton-sc-1e82yhp-0 lktbhK" aria-label="Login"
+                                href="https://login.blockchain.com/#/login?utm_campaign=dcomnav_login">
+                                Log In
+                            </button></a><a class="Link__CustomLink-sc-1p80yfz-0 bCfMzW"
+                            href="https://login.blockchain.com/#/signup?showWallet?utm_campaign=dcomnav_signup"><button
+                                type="submit" class="Button__DefaultButton-sc-1e82yhp-0 enZPoY" aria-label="Sign Up"
+                                href="https://login.blockchain.com/#/signup?showWallet?utm_campaign=dcomnav_signup">
+                                Sign Up
+                            </button></a>
+                    </div>
+                </div>
+  </div>
+</nav>
+   </div>
+              
+            
+               
+              
+                
+       
+       
+  
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js "></script>
+</body>
+
+</html>
