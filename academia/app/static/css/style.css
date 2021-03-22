@@ -1,11 +1,14 @@
 .navbar{
      background-color: #10346A; 
 }
+.acceso{
+    margin-left: 280px; 
+}
 .nav-item{
     color: white;
 }
 .navbaritem{
-    margin:auto;
+    margin-left: 30px;
     font-size: 30px;   
 }
 .dropdown-toggle{
@@ -30,6 +33,7 @@
     border: transparent;
     background-color: rgb(19, 12, 20);
     line-height: 2.5rem;
+    margin-left: 10px;
 }
 .SignUp {
     display: inline-block;
