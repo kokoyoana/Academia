@@ -1,7 +1,10 @@
 .navbar{
      background-color: #10346A; 
 }
-
+.navbar-nav{
+    margin-left: 25px;
+    font-size: 30px;   
+}
 .login {
   display: inline-block;
     font-weight: 600;
