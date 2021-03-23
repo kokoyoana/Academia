@@ -3,10 +3,10 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Academia</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academia</title>
 
   <link rel="stylesheet" href="{% static 'css/style.css' %}" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
@@ -15,77 +15,131 @@
 </head>
 
 <body>
-  
-<nav class="navbar navbar-expand-md navbar-dark">
-     <a href="#" class="navbar-brand">
-                <img src="{% static 'img/logoacademia.png' %}" height="180" width="250px;" alt="CoolBrand" />
-            </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Navegación de palanca">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="{% url 'app:Index' %}"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Academia </font></font><span class="sr-only"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(Actual)</font></font></span></a>
-          </li>
-          <li class="nav-item dropdown show">
-                        <a class="nav-link dropdown-toggle" href="#" id="" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="true" style="color: white;">
-                            Cursos
-                        </a>
-                        <ul class=" dropdown-menu show">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            <li class="divider" role="separator"></li>
 
-                            <li><a class="dropdown-item" href="#">Separated link</a></li>
-                            <li class="divider" role="separator"></li>
-                            <li><a class="dropdown-item" href="#">One more separated link</a></li>
-                        </ul>
-                    </li>
-                       <li class="nav-item active">
-            <a class="nav-link" href="{% url 'app:contactos' %}"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Contacto </font></font><span class="sr-only"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(Actual)</font></font></span></a>
-          </li>
-        </ul>
-        <div class="navbar-nav">
-                    <div class="Header__NavInner-ra9ecu-2 jbqrRB">
-                        <div class="ButtonGroup-z74grn-0 acceso">
-                            <a class="Link__CustomLink-sc-1p80yfz-0 btnLogin"
-                                href="https://login.blockchain.com/#/login?utm_campaign=dcomnav_login"><button
-                                    type="submit" class="Button__DefaultButton-sc-1e82yhp-0 login" aria-label="Login"
-                                    href="https://login.blockchain.com/#/login?utm_campaign=dcomnav_login">
-                                    Log In
-                                </button></a><a class="Link__CustomLink-sc-1p80yfz-0 bCfMzW"
-                                href="https://login.blockchain.com/#/signup?showWallet?utm_campaign=dcomnav_signup"><button
-                                    type="submit" class="Button__DefaultButton-sc-1e82yhp-0 SignUp" aria-label="Sign Up"
-                                    href="https://login.blockchain.com/#/signup?showWallet?utm_campaign=dcomnav_signup">
-                                    Sign Up
-                                </button></a>
-                        </div>
-                    </div>
-                </div>
+  <nav class="navbar navbar-expand-md navbar-dark">
+    <a href="#" class="navbar-brand">
+      <img src="{% static 'img/logoacademia.png' %}" height="180" width="250px;" alt="CoolBrand" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+      aria-controls="navbarCollapse" aria-expanded="false" aria-label="Navegación de palanca">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ml-5">
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'app:Index' %}">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">Academia </font>
+            </font><span class="sr-only">
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">(Actual)</font>
+              </font>
+            </span>
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="true" style="color: white;">
+            Cursos
+          </a>
+          <ul class=" dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li class="divider" role="separator"></li>
+
+            <li><a class="dropdown-item" href="#">Separated link</a></li>
+            <li class="divider" role="separator"></li>
+            <li><a class="dropdown-item" href="#">One more separated link</a></li>
+          </ul>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'app:contactos' %}">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">Contacto </font>
+            </font><span class="sr-only">
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">(Actual)</font>
+              </font>
+            </span>
+          </a>
+        </li>
+      </ul>
+      <div class="navbar-nav ml-auto">
+        <div class="Header__NavInner-ra9ecu-2 jbqrRB">
+          <div class="ButtonGroup-z74grn-0 acceso">
+            <a class="Link__CustomLink-sc-1p80yfz-0 btnLogin"
+              href="https://login.blockchain.com/#/login?utm_campaign=dcomnav_login"><button type="submit"
+                class="Button__DefaultButton-sc-1e82yhp-0 login" aria-label="Login"
+                href="https://login.blockchain.com/#/login?utm_campaign=dcomnav_login">
+                Log In
+              </button></a><a class="Link__CustomLink-sc-1p80yfz-0 bCfMzW"
+              href="https://login.blockchain.com/#/signup?showWallet?utm_campaign=dcomnav_signup"><button type="submit"
+                class="Button__DefaultButton-sc-1e82yhp-0 SignUp" aria-label="Sign Up"
+                href="https://login.blockchain.com/#/signup?showWallet?utm_campaign=dcomnav_signup">
+                Sign Up
+              </button></a>
+          </div>
+        </div>
       </div>
-    </nav>
-    <!-- Fin Header -->
+    </div>
+  </nav>
+  <!-- Fin Header -->
 
-      <!--================ Start Home =================-->
+  <!--================ Start Home =================-->
 
- {% block content %}
+  {% block content %}
+  <div class="box boxhome marginHome">
+    <div class="container">
+      <div id="disclaimer" class="row">
+        <div class="col-md-12 col-sm-6 col-md-8">
+            <h1>¿Quieres aprender a invertir en Forex?</h1>
+          </div>
+        <div class="col-sm-6 col-md-8  main-text-content left-column">
+          <div class="col-xs-12 col-md-12 kv-texts primary-head-three">
+            <p>Somos una academia de trading con base principal en República Dominicana fundada en el año 2018 y una segunda sucursal en Madrid (España) fundada en el año 2020.</p>
+           
+            <ul>
+              <li><strong>Nos encargamos en la formación profesional en el ámbito de las inversiones en el mercado de forex y criptomonedas.</strong> 
+              </li>  <br>
+              <li><strong>Lo que nos diferencia de las demás academias es que una vez alcanzada tu rentabilidad podrás pertenecer a nuestro equipo de trabajo.</strong></li><br>
+              <li><strong>+ de 150 personas en nuestro equipo de trabajo.</strong><br><br>
+              </li>
+            </ul>
+          <h2 class="primary-head-two"> Contáctanos para iniciarte en este mercado.
+          </h2>
+          </div>
+
+        </div>
+        <div class="col-sm-6 col-md-4">
+
+          <div class="packshot-wrapper">
+
+            <img src="{% static 'img/velas.jpg' %}" height="250" width="270px;" alt="velasjaponesas" />
+
+          </div>
 
 
+        </div>
+      </div>
+    </div>
+  </div>
 
-   {% endblock content %}
 
  
 
 
+  {% endblock content %}
 
-  
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js "></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js "></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js "></script>
-    <script src="{% static 'js/script.js' %} "></script>
+
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js "></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js "></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js "></script>
+  <script src="{% static 'js/script.js' %} "></script>
 
 </body>
 
