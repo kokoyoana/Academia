@@ -1,0 +1,40 @@
+{% extends 'app/index.html'%} {% load static %} {% load bootstrap4 %}
+{% block content %}{% load widget_tweaks %}
+
+<form action="/contacto/" method="POST">
+   {% csrf_token %}
+
+   <div class="marginAviso">
+      <div class="col-md-4 offset-md-4">
+
+         <div class="form-group">
+            <h3 style="color: black;margin-bottom: 30px;margin-left: 50px;">Contacta con nosotros</h3>
+            <p> {{ contact_form.nombre.label }}</p>
+            {% render_field contact_form.nombre class+="form-control" %}
+         </div>
+         <div class="form-group">
+            {% csrf_token %}
+            <p> {{ contact_form.telefono.label }}</p>
+            {% render_field contact_form.telefono class+="form-control" %}
+         </div>
+         <div class="form-group">
+            {% csrf_token %}
+            <p> {{ contact_form.email.label }}</p>
+            {% render_field contact_form.email class+="form-control" %}
+         </div>
+         <div class="form-group">
+            {% csrf_token %}
+            <p> {{ contact_form.mensaje.label }}</p>
+            {% render_field contact_form.mensaje class+="form-control" %}
+         </div>
+
+
+         <div class="actions mb-5">
+            <input class="form-control" type="submit" value="ENVIAR">
+
+         </div>
+      </div>
+   </div>
+   {% endblock content%}
+
+</form>
