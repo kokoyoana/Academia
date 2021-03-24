@@ -5,7 +5,7 @@ $(document).ready(llamadaApi);
     function llamadaApi(){
     $.ajax({
 
-        url: 'https://finnhub.io/api/v1/stock/profile2?symbol=AAPL&token=c1dkaen48v6tbf1bn6a0',
+        url: 'https://finnhub.io/api/v1/forex/symbol?exchange=oanda&token=c1do2a748v6peb0l695g',
         type: 'get',
         dataType: 'json',
         headers: { 
