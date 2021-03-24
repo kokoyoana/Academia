@@ -17,15 +17,13 @@
 <body>
 
   <nav class="navbar navbar-expand-md navbar-dark">
-    <a href="#" class="navbar-brand">
-      <img src="{% static 'img/logoacademia.png' %}" height="180" width="250px;" alt="CoolBrand" />
-    </a>
+   
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
       aria-controls="navbarCollapse" aria-expanded="false" aria-label="Navegación de palanca">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav ml-5">
+      <ul class="navbar-nav ml-5 pl-5">
         <li class="nav-item active">
           <a class="nav-link" href="{% url 'app:Index' %}">
             <font style="vertical-align: inherit;">
@@ -106,19 +104,22 @@
               <li><strong>+ de 150 personas en nuestro equipo de trabajo.</strong><br><br>
               </li>
             </ul>
-          <h2 class="primary-head-two"> Contáctanos para iniciarte en este mercado.
-          </h2>
+          <h2 class="primary-head-two"> Contáctanos para iniciarte en este mercado.<a href="https://wa.me/644497593" ><i class="fab fa-whatsapp"></a></i></h2>
+
+         
           </div>
 
         </div>
         <div class="col-sm-6 col-md-4">
 
           <div class="packshot-wrapper">
+            
 
-            <img src="{% static 'img/velas.jpg' %}" height="250" width="270px;" alt="velasjaponesas" />
+            <img src="{% static 'img/logoacademia.png' %}" height="250" width="270px;" alt="logoacademia" />
 
           </div>
 
+  
 
         </div>
       </div>
@@ -126,7 +127,6 @@
   </div>
 
 
- 
 
 
   {% endblock content %}
@@ -137,6 +137,7 @@
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js "></script>
+  <script src="https://kit.fontawesome.com/94d365e8cc.js " crossorigin="anonymous "></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js "></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js "></script>
   <script src="{% static 'js/script.js' %} "></script>

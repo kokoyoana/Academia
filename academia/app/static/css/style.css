@@ -5,16 +5,18 @@
   position: relative;
 }
 .marginAviso{
-  padding: 150px 30px 25px 30px; 
+  padding: 30px 25px 30px; 
   background-color: #ffffff;
 
 }
 .navbar{
      background-color: #10346A; 
+    
+
 }
 .navbar-nav{
     margin-left: 25px;
-    font-size: 30px;  
+    font-size: 25px;  
     margin-right: 100px; 
 }
 .login {
@@ -54,5 +56,4 @@
 .boxhome{
     top: 40px;
     font-size: 20px;
-  
 }
