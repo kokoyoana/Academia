@@ -1,148 +1,250 @@
-{% load static %} {% load bootstrap4 %} {% load static i18n %}
+{% load static %} {% load bootstrap4 %} {% load static i18n %}{% load widget_tweaks %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Academia</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Academia</title>
 
-  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-
-  <nav class="navbar navbar-expand-md navbar-dark">
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-      aria-controls="navbarCollapse" aria-expanded="false" aria-label="Navegación de palanca">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav ml-5 pl-5">
-        <li class="nav-item active">
-          <a class="nav-link" href="{% url 'app:Index' %}">
-            <font style="vertical-align: inherit;">
-              <font style="vertical-align: inherit;">Academia </font>
-            </font><span class="sr-only">
-              <font style="vertical-align: inherit;">
-                <font style="vertical-align: inherit;">(Actual)</font>
-              </font>
-            </span>
-          </a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="true" style="color: white;">
-            Cursos
-          </a>
-          <ul class=" dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-            <li class="divider" role="separator"></li>
-
-            <li><a class="dropdown-item" href="#">Separated link</a></li>
-            <li class="divider" role="separator"></li>
-            <li><a class="dropdown-item" href="#">One more separated link</a></li>
-          </ul>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="{% url 'app:contactos' %}">
-            <font style="vertical-align: inherit;">
-              <font style="vertical-align: inherit;">Contacto </font>
-            </font><span class="sr-only">
-              <font style="vertical-align: inherit;">
-                <font style="vertical-align: inherit;">(Actual)</font>
-              </font>
-            </span>
-          </a>
-        </li>
-      </ul>
-      <div class="navbar-nav ml-auto">
-        <div class="Header__NavInner-ra9ecu-2 jbqrRB">
-          <div class="ButtonGroup-z74grn-0 acceso">
-            <a class="Link__CustomLink-sc-1p80yfz-0 btnLogin"
-              href="https://login.blockchain.com/#/login?utm_campaign=dcomnav_login"><button type="submit"
-                class="Button__DefaultButton-sc-1e82yhp-0 login" aria-label="Login"
-                href="https://login.blockchain.com/#/login?utm_campaign=dcomnav_login">
-                Log In
-              </button></a><a class="Link__CustomLink-sc-1p80yfz-0 bCfMzW"
-              href="https://login.blockchain.com/#/signup?showWallet?utm_campaign=dcomnav_signup"><button type="submit"
-                class="Button__DefaultButton-sc-1e82yhp-0 SignUp" aria-label="Sign Up"
-                href="https://login.blockchain.com/#/signup?showWallet?utm_campaign=dcomnav_signup">
-                Sign Up
-              </button></a>
-          </div>
+    <nav class="navbar navbar-expand-lg text-uppercase fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">ACADEMIA DE INVERSIÓN</a>
+            <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold rounded" type="button"
+                data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                            href="#cursos">Cursos</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                            href="#quienes">Quienes Somos</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                            href="#contact">Contacto</a></li>
+                </ul>
+            </div>
         </div>
-      </div>
-    </div>
-  </nav>
-  <!-- Fin Header -->
+    </nav>
+    <!-- Fin Header -->
 
-  <!--================ Start Home =================-->
-  {% block content %}
-  <div class="box boxhome marginHome">
-    <div class="container">
-      <div id="disclaimer" class="row">
-        <div class="col-md-12 col-sm-6 col-md-8">
-          <h1>¿Quieres aprender a invertir en Forex?</h1>
+    <!--================ Start Home =================-->
+    {% block content %}
+    <header class="masthead estaHead text-white text-center">
+        <div class="container d-flex align-items-center flex-column" style="margin-top:70px;">
+            <!-- Masthead Avatar Image-->
+            <img class="masthead-avatar mb-5" src="{% static 'img/logoacademia.png' %}" alt="LOGOACADEMIA" />
+            <!-- Masthead Heading-->
+            <!-- Icon Divider-->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Masthead Subheading-->
+            <h2 class="masthead-subheading font-weight-light mb-0">- Criptomonedas - Forex - </h2>
         </div>
-        <div class="col-sm-6 col-md-8  main-text-content left-column">
-          <div class="col-xs-12 col-md-12 kv-texts primary-head-three">
-            <p>Somos una academia de trading con base principal en República Dominicana fundada en el año 2018 y una
-              segunda sucursal en Madrid (España) fundada en el año 2020.</p>
+    </header>
 
-            <ul>
-              <li><strong>Nos encargamos de la formación profesional en el ámbito de las inversiones en el mercado de
-                  Forex y Criptomonedas.</strong>
-              </li> <br>
-              <li><strong>Lo que nos diferencia de las demás academias, es que una vez alcanzada tu rentabilidad podrás
-                  pertenecer a nuestro equipo de trabajo.</strong></li><br>
-              <li><strong>+ de 150 personas en nuestro equipo de trabajo.</strong><br><br>
-              </li>
-            </ul>
-            <h2 class="primary-head-two"> Contáctanos para iniciarte en este mercado.<a
-                href="https://wa.me/644497593"><i class="fab fa-whatsapp"></a></i></h2>
-
-
-          </div>
-
+    <!-- Portfolio Section-->
+    <section class="page-section portfolio" id="cursos">
+        <div class="container">
+            <!-- Portfolio Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Cursos</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+               
+            </div>
+            <!-- Portfolio Grid Items-->
+            <div class="row justify-content-center imagen">
+                <!-- Portfolio Item 1-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#Modal1">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src={% static 'img/operar.jpg' %} alt="" />
+                    </div>
+                </div>
+                <!-- Portfolio Item 2-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src={% static 'img/trading.jpg' %} alt="trading" />
+                    </div>
+                </div>
+                <!-- Portfolio Item 3-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src={% static 'img/analysis.webp' %} alt="" />
+                    </div>
+                </div>
+                <!-- Portfolio Item 4-->
+                <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                    <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src={% static 'img/monedas.webp' %} alt="" />
+                    </div>
+                </div>
+                <!-- Portfolio Item 5-->
+                <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
+                    <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="{% static 'img/velas.jpg' %}" alt="" />
+                    </div>
+                </div>
+                <!-- Portfolio Item 6-->
+                <div class="col-md-6 col-lg-4 ">
+                    <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="{% static 'img/grafico.webp' %}" alt="" />
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-sm-6 col-md-4">
+    </section>
 
-          <div class="">
-
-
-<iframe src="https://es.widgets.investing.com/top-cryptocurrencies?theme=darkTheme"  height="600" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0"></iframe>          </div>
-
-
-
+    <!-- About Section-->
+    <section class="page-section text-white mb-0" style="background-color: #05406D;" id="quienes">
+        <div class="container">
+            <!-- About Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-white">Quienes Somos</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- About Section Content-->
+            <div class="row">
+                <div class="col-lg-4 ml-auto">
+                    <p class="lead">Somos una academia de Trading de Republica Dominicana fundada en el año 2018 y una segunda sucursal en Madrid(España) fundada en el año 2020.</p>
+                </div>
+                <div class="col-lg-4 mr-auto">
+                    <p class="lead">Nos encargamos de la formación profesional en el ámbito de las inversiones en el mercado de Forex y Criptomonedas.</p>
+                </div>
+                 <div class="col-lg-4 mr-auto">
+                    <p class="lead">Lo que nos diferencia de las demás academias es que una vez alcanzada tu rentabilidad podras pertenecer a nuestro equipo de trabajo.</p>
+                </div>
+            </div>
+            <!-- About Section Button-->
+            <div class="text-center mt-4">
+                <h3>+ de 150 personas en nuestro equipo de trabajo.</h3>
+                  
+                </a>
+            </div>
         </div>
-      </div>
-      <div>
-      </div>
-    </div>
-  </div>
+    </section>
+      <!-- Contact Section-->
+        <section class="page-section" id="contact">
+            <div class="container">
+                <!-- Contact Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contactanos</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-icon"><i class="fas fa-phone-volume"></i></div>
+                </div>
+                <!-- Contact Section Form-->
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.-->
+                        <form action="/contacto/" method="POST">
+                         {% csrf_token %}
+                           
+                                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                     {% csrf_token %}
+                                    <label>Nombre</label>
+                                    <input class="form-control"  type="text" placeholder="Nombre"/>
+                                    {% render_field contact_form.nombre %}
+
+                                    <p></p>
+                                </div>
+                        
+                            <div class="control-group">
+                                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                    {% csrf_token %}
+                                    <label>Email </label>
+                                    <input class="form-control" type="email" placeholder="Email"/>
+                                    {% render_field contact_form.email %}
+
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                    {% csrf_token %}
+                                    <p> {{ contact_form.nombre.label }}</p>
+
+                                    <input class="form-control"  type="tel" placeholder="Numero Teléfono"/>
+                                    {% render_field contact_form.telefono %}
+
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                    <label>Mensaje</label>
+                                    <textarea class="form-control"rows="5" placeholder="Mensaje"></textarea>
+                                    {% render_field contact_form.mensaje %}
+
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <br />
+                           
+            <input class="form-control" type="submit" value="ENVIAR">
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+    {% endblock content %}
 
 
 
-  {% endblock content %}
 
 
 
-
-
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js "></script>
-  <script src="https://kit.fontawesome.com/94d365e8cc.js " crossorigin="anonymous "></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js "></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js "></script>
-  <script src="{% static 'js/script.js' %} "></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js "></script>
+    <script src="https://kit.fontawesome.com/94d365e8cc.js " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js "></script>
+    <script src="{% static 'js/script.js' %} "></script>
 
 </body>
 

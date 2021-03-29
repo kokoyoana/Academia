@@ -21,9 +21,6 @@ class Home(TemplateView):
 
 
 
-class Contacto(TemplateView):
-    template_name='app/contacto.html'
-
     
 
 
