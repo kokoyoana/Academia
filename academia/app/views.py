@@ -19,7 +19,8 @@ class Home(TemplateView):
 
     def get_context_data(self,**kwargs):
         context=super(Home, self).get_context_data(**kwargs)
-        context['contact_form'] =Formulario()
+        context['contact_form'] = Formulario()
+        context['cursos'] = Curso.objects.all()
  
         return context
 
@@ -59,15 +60,19 @@ class Home(TemplateView):
     
 class Cursos(TemplateView):
     template_name='app/cursos.html'
+    model = Curso
 
     def get_context_data(self,**kwargs):
         context=super(Cursos, self).get_context_data(**kwargs) 
    
+        context['cursos']= Curso.objects.all()
+
         return context
 
 
 class Contacto(TemplateView):
     template_name = 'app/contacto.html'
+    
   
 
     def get_context_data(self,**kwargs):
@@ -105,5 +110,7 @@ class Contacto(TemplateView):
         email_message.send()
         return redirect('app:inicio')
 
+class Quien(TemplateView):
+    template_name='app/quienes.html'
 
 
