@@ -17,7 +17,7 @@
 <body>
     <nav class="navbar navbar-expand-lg text-uppercase fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">ACADEMIA DE INVERSIÓN</a>
+            <a class="navbar-brand js-scroll-trigger" href="{% url 'app:inicio' %}">ACADEMIA DE INVERSIÓN</a>
             <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold rounded" type="button"
                 data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -27,11 +27,11 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
-                            href="#cursos">Cursos</a></li>
+                            href="{% url 'app:curso' %}">Cursos</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
                             href="#quienes">Quienes Somos</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
-                            href="#contact">Contacto</a></li>
+                            href="{% url 'app:contactos' %}">Contacto</a></li>
                 </ul>
             </div>
         </div>
@@ -136,6 +136,7 @@
             </div>
         </div>
     </section>
+    
 
     <!-- About Section-->
     <section class="page-section text-white mb-0" style="background-color: #05406D;" id="quienes">
@@ -170,68 +171,63 @@
     </section>
       <!-- Contact Section-->
         <section class="page-section" id="contact">
-            <div class="container">
-                <!-- Contact Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contactanos</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                    <div class="divider-custom-icon"><i class="fas fa-phone-volume"></i></div>
-                </div>
-                <!-- Contact Section Form-->
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.-->
-                        <form action="/contacto/" method="POST">
-                         {% csrf_token %}
-                           
-                                <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                                     {% csrf_token %}
-                                    <label>Nombre</label>
-                                    <input class="form-control"  type="text" placeholder="Nombre"/>
-                                    {% render_field contact_form.nombre %}
+   <div class="container">
+      <!-- Contact Section Heading-->
+      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contactanos</h2>
+      <!-- Icon Divider-->
+      <div class="divider-custom">
+         <div class="divider-custom-icon"><i class="fas fa-phone-volume"></i></div>
+      </div>
+      <!-- Contact Section Form-->
+      <div class="row">
+         <div class="col-lg-8 mx-auto">
+            <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.-->
+            <form action="/contacto/" method="POST">
+               {% csrf_token %}
 
-                                    <p></p>
-                                </div>
-                        
-                            <div class="control-group">
-                                <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                                    {% csrf_token %}
-                                    <label>Email </label>
-                                    <input class="form-control" type="email" placeholder="Email"/>
-                                    {% render_field contact_form.email %}
+               <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  {% csrf_token %}
+                  <label>Nombre</label>
+                  {% render_field contact_form.nombre class+="form-control" %}
 
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                                    {% csrf_token %}
-                                    <p> {{ contact_form.nombre.label }}</p>
+                  <p></p>
+               </div>
 
-                                    <input class="form-control"  type="tel" placeholder="Numero Teléfono"/>
-                                    {% render_field contact_form.telefono %}
+               <div class="control-group">
+                  <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                     {% csrf_token %}
+                     <label>Email </label>
+                     {% render_field contact_form.email class+="form-control"  %}
 
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                                    <label>Mensaje</label>
-                                    <textarea class="form-control"rows="5" placeholder="Mensaje"></textarea>
-                                    {% render_field contact_form.mensaje %}
+                     <p class="help-block text-danger"></p>
+                  </div>
+               </div>
+               <div class="control-group">
+                  <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                     {% csrf_token %}
+                     <label>Telefono</label>
+                     {% render_field contact_form.telefono class+="form-control"  %}
 
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <br />
-                           
-            <input class="form-control" type="submit" value="ENVIAR">
-                        </form>
-                    </div>
-                    
-                </div>
-            </div>
-        </section>
+                     <p class="help-block text-danger"></p>
+                  </div>
+               </div>
+               <div class="control-group">
+                  <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                     <label>Mensaje</label>
+                     {% render_field contact_form.mensaje class+="form-control"  %}
+
+                     <p class="help-block text-danger"></p>
+                  </div>
+               </div>
+               <br />
+
+               <input class="form-control" type="submit" value="ENVIAR">
+            </form>
+         </div>
+
+      </div>
+   </div>
+</section>
 
     {% endblock content %}
 

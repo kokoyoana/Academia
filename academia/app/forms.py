@@ -10,3 +10,5 @@ class Formulario(forms.Form):
     mensaje = forms.CharField(label='Mensaje',widget=forms.Textarea,max_length=1000)
     email = forms.EmailField(label='Correo electronico')
     telefono = forms.CharField(label='Teléfono')
+
+ 

@@ -17,11 +17,53 @@ from django.contrib.auth import login, logout
 class Home(TemplateView):
     template_name='app/index.html'
 
+    def get_context_data(self,**kwargs):
+        context=super(Home, self).get_context_data(**kwargs)
+        context['contact_form'] =Formulario()
+ 
+        return context
+
+    def post(self, request,*args,**kwargs):
+        nombre = request.POST.get('nombre')
+        mensaje = request.POST.get('mensaje')
+        email = request.POST.get('email')
+        telefono = request.POST.get('telefono')
+      
+
+        body= render_to_string(
+            'app/email_content.html', {
+                'nombre':nombre,
+                'mensaje':mensaje,
+                'email':email,
+                'telefono':telefono,
+                
+            },
+        )
+
+        print(nombre)
+
+        email_message = EmailMessage(
+            subject='mensaje de usuario',
+            body=body,
+            from_email=email,
+            to=['kokoyoana8@gmail.com'],
+        )
+        email_message.content_subtype='html'
+        email_message.send()
+        return redirect('app:inicio')
 
 
+  
 
 
     
+class Cursos(TemplateView):
+    template_name='app/cursos.html'
+
+    def get_context_data(self,**kwargs):
+        context=super(Cursos, self).get_context_data(**kwargs) 
+   
+        return context
 
 
 class Contacto(TemplateView):
@@ -61,7 +103,7 @@ class Contacto(TemplateView):
         )
         email_message.content_subtype='html'
         email_message.send()
-        return redirect('app:contactos')
+        return redirect('app:inicio')
 
 
-  
+
