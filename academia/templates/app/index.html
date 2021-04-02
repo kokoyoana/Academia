@@ -32,6 +32,17 @@
                             href="{% url 'app:quien' %}">Quiénes Somos</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
                             href="{% url 'app:contactos' %}">Contacto</a></li>
+                    <a class="Link__CustomLink-sc-1p80yfz-0 btnLogin"
+                        href="https://login.blockchain.com/#/login?utm_campaign=dcomnav_login"><button type="submit"
+                            class="Button__DefaultButton-sc-1e82yhp-0 login" aria-label="Login"
+                            href="https://login.blockchain.com/#/login?utm_campaign=dcomnav_login">
+                            Log In
+                        </button></a><a class="Link__CustomLink-sc-1p80yfz-0 bCfMzW"
+                        href="https://login.blockchain.com/#/signup?showWallet?utm_campaign=dcomnav_signup"><button
+                            type="submit" class="Button__DefaultButton-sc-1e82yhp-0 SignUp" aria-label="Sign Up"
+                            href="https://login.blockchain.com/#/signup?showWallet?utm_campaign=dcomnav_signup">
+                            Sign Up
+                        </button></a>
                 </ul>
             </div>
         </div>
@@ -41,20 +52,81 @@
     <!--================ Start Home =================-->
     {% block content %}
     <header class="masthead estaHead text-white text-center">
-        <div class="container d-flex align-items-center flex-column" style="margin-top:70px;">
-            <!-- Masthead Avatar Image-->
-            <img class="masthead-avatar mb-5" src="{% static 'img/logoacademia.png' %}" alt="LOGOACADEMIA" />
-            <!-- Masthead Heading-->
+
+
+
+
+        <div id="demo" class="carousel slide" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{% static 'img/flayer.jpg' %}" alt="flayer">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'img/logo.jpg' %}" alt="logo">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'img/flayer.jpg' %}" alt="flayer">
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+
+
+
+
+
+    </header>
+
+      <!-- About Section-->
+    <section class="page-section text-white mb-0" style="background-color: #05406D;" id="quienes">
+        <div class="container">
+            <!-- About Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-white">Quiénes Somos</h2>
             <!-- Icon Divider-->
             <div class="divider-custom divider-light">
                 <div class="divider-custom-line"></div>
                 <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                 <div class="divider-custom-line"></div>
             </div>
-            <!-- Masthead Subheading-->
-            <h2 class="masthead-subheading font-weight-light mb-0">- Criptomonedas - Forex - </h2>
+            <!-- About Section Content-->
+            <div class="row">
+                <div class="col-lg-4 ml-auto">
+                    <p class="lead">Somos una academia de Trading de Republica Dominicana fundada en el año 2018 y una
+                        segunda sucursal en Madrid(España) fundada en el año 2020.</p>
+                </div>
+                <div class="col-lg-4 mr-auto">
+                    <p class="lead">Nos encargamos de la formación profesional en el ámbito de las inversiones en el
+                        mercado de Forex y Criptomonedas.</p>
+                </div>
+                <div class="col-lg-4 mr-auto">
+                    <p class="lead">Lo que nos diferencia de las demás academias es que una vez alcanzada tu
+                        rentabilidad podras pertenecer a nuestro equipo de trabajo.</p>
+                </div>
+            </div>
+            <!-- About Section Button-->
+            <div class="text-center mt-4">
+                <h3>+ de 150 personas en nuestro equipo de trabajo.</h3>
+
+                </a>
+            </div>
         </div>
-    </header>
+    </section>
 
     <!-- Portfolio Section-->
     <section class="page-section portfolio" id="cursos">
@@ -63,7 +135,7 @@
             <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Cursos</h2>
             <!-- Icon Divider-->
             <div class="divider-custom">
-               
+
             </div>
             <!-- Portfolio Grid Items-->
             <div class="row justify-content-center imagen">
@@ -136,98 +208,67 @@
             </div>
         </div>
     </section>
-    
 
-    <!-- About Section-->
-    <section class="page-section text-white mb-0" style="background-color: #05406D;" id="quienes">
+
+    <!-- Contact Section-->
+    <section class="page-section" id="contact">
         <div class="container">
-            <!-- About Section Heading-->
-            <h2 class="page-section-heading text-center text-uppercase text-white">Quiénes Somos</h2>
+            <!-- Contact Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contáctanos</h2>
             <!-- Icon Divider-->
-            <div class="divider-custom divider-light">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                <div class="divider-custom-line"></div>
+            <div class="divider-custom">
+                <div class="divider-custom-icon"><i class="fas fa-phone-volume"></i></div>
             </div>
-            <!-- About Section Content-->
+            <!-- Contact Section Form-->
             <div class="row">
-                <div class="col-lg-4 ml-auto">
-                    <p class="lead">Somos una academia de Trading de Republica Dominicana fundada en el año 2018 y una segunda sucursal en Madrid(España) fundada en el año 2020.</p>
+                <div class="col-lg-8 mx-auto">
+                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.-->
+                    <form action="/contacto/" method="POST">
+                        {% csrf_token %}
+
+                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                            {% csrf_token %}
+                            <label>Nombre</label>
+                            {% render_field contact_form.nombre class+="form-control" %}
+
+                            <p></p>
+                        </div>
+
+                        <div class="control-group">
+                            <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                {% csrf_token %}
+                                <label>Email </label>
+                                {% render_field contact_form.email class+="form-control"  %}
+
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                {% csrf_token %}
+                                <label>Teléfono</label>
+                                {% render_field contact_form.telefono class+="form-control"  %}
+
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                <label>Mensaje</label>
+                                {% render_field contact_form.mensaje class+="form-control"  %}
+
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <br />
+
+                        <input class="form-control" type="submit" value="ENVIAR">
+                    </form>
                 </div>
-                <div class="col-lg-4 mr-auto">
-                    <p class="lead">Nos encargamos de la formación profesional en el ámbito de las inversiones en el mercado de Forex y Criptomonedas.</p>
-                </div>
-                 <div class="col-lg-4 mr-auto">
-                    <p class="lead">Lo que nos diferencia de las demás academias es que una vez alcanzada tu rentabilidad podras pertenecer a nuestro equipo de trabajo.</p>
-                </div>
-            </div>
-            <!-- About Section Button-->
-            <div class="text-center mt-4">
-                <h3>+ de 150 personas en nuestro equipo de trabajo.</h3>
-                  
-                </a>
+
             </div>
         </div>
     </section>
-      <!-- Contact Section-->
-        <section class="page-section" id="contact">
-   <div class="container">
-      <!-- Contact Section Heading-->
-      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contáctanos</h2>
-      <!-- Icon Divider-->
-      <div class="divider-custom">
-         <div class="divider-custom-icon"><i class="fas fa-phone-volume"></i></div>
-      </div>
-      <!-- Contact Section Form-->
-      <div class="row">
-         <div class="col-lg-8 mx-auto">
-            <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.-->
-            <form action="/contacto/" method="POST">
-               {% csrf_token %}
-
-               <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                  {% csrf_token %}
-                  <label>Nombre</label>
-                  {% render_field contact_form.nombre class+="form-control" %}
-
-                  <p></p>
-               </div>
-
-               <div class="control-group">
-                  <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                     {% csrf_token %}
-                     <label>Email </label>
-                     {% render_field contact_form.email class+="form-control"  %}
-
-                     <p class="help-block text-danger"></p>
-                  </div>
-               </div>
-               <div class="control-group">
-                  <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                     {% csrf_token %}
-                     <label>Teléfono</label>
-                     {% render_field contact_form.telefono class+="form-control"  %}
-
-                     <p class="help-block text-danger"></p>
-                  </div>
-               </div>
-               <div class="control-group">
-                  <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                     <label>Mensaje</label>
-                     {% render_field contact_form.mensaje class+="form-control"  %}
-
-                     <p class="help-block text-danger"></p>
-                  </div>
-               </div>
-               <br />
-
-               <input class="form-control" type="submit" value="ENVIAR">
-            </form>
-         </div>
-
-      </div>
-   </div>
-</section>
 
     {% endblock content %}
 

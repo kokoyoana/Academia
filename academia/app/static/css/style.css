@@ -78,8 +78,9 @@ h2{
     text-align: center !important;
 }
 .estaHead{
- background-image: url('../img/forex.jpg');
+ background-color: white;
  background-position-y:top ;
+
 }
 .imgPortada{
   margin-top: 70px;
@@ -389,4 +390,61 @@ a > code {
     width: 100%;
 }
 
+
+
+.login {
+  display: inline-block;
+    font-weight: 600;
+    text-align: center;
+    outline: none;
+    flex: 0 0 auto;
+    border-radius: 8px;
+    height: 2.5rem;
+    color: white;
+    opacity: 1;
+    font-size: 1rem;
+    padding: 0px 1rem;
+    border: transparent;
+    background-color: rgb(19, 12, 20);
+    line-height: 2.5rem;
+    margin-right: 15px;
+
+}
+.SignUp {
+    display: inline-block;
+    font-weight: 600;
+    text-align: center;
+    outline: none;
+    flex: 0 0 auto;
+    border-radius: 8px;
+    height: 2.5rem;
+    color: white;
+    opacity: 1;
+    font-size: 1rem;
+    padding: 0px 1rem;
+    border: transparent;
+    background-color: rgb(12, 108, 242);
+    line-height: 2.5rem;
+}
+
+/* .carousel-item {
+  height: 65vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.card-columns .card {
+  display: inline-block;
+  width: 100%;
+} */
+
+
+
+.carousel-inner img {
+  height: 450px;
+}
    
