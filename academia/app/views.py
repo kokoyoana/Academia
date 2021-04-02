@@ -11,7 +11,8 @@ from django.template.loader import render_to_string
 from random import choices
 from django.db.models import Avg
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from django.contrib.auth import login, logout
+from django.contrib.auth import login,logout
+
 
 # Create your views here.
 class Home(TemplateView):
@@ -112,5 +113,24 @@ class Contacto(TemplateView):
 
 class Quien(TemplateView):
     template_name='app/quienes.html'
+
+
+
+
+         
+def login_view(request):
+    if request.method == 'POST':
+        form = AuthenticationForm(data=request.POST)
+        if form.is_valid():
+            return redirect('app:curso')
+    else:
+        form = AuthenticationForm()
+    return render(request, 'app/login.html', {'form': form})
+
+def logout_view(request):
+    if request.method == 'POST':
+        logout(request)
+        return redirect('app:inicio')
+ 
 
 

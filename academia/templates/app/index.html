@@ -32,17 +32,22 @@
                             href="{% url 'app:quien' %}">Quiénes Somos</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
                             href="{% url 'app:contactos' %}">Contacto</a></li>
-                    <a class="Link__CustomLink-sc-1p80yfz-0 btnLogin"
-                        href="https://login.blockchain.com/#/login?utm_campaign=dcomnav_login"><button type="submit"
-                            class="Button__DefaultButton-sc-1e82yhp-0 login" aria-label="Login"
-                            href="https://login.blockchain.com/#/login?utm_campaign=dcomnav_login">
+
+                    <form action="{% url 'app:login' %}" method="post">
+                        {% csrf_token %}
+
+                        <button type="submit" class="SignUp" aria-label="Sign Up">
                             Log In
-                        </button></a><a class="Link__CustomLink-sc-1p80yfz-0 bCfMzW"
-                        href="https://login.blockchain.com/#/signup?showWallet?utm_campaign=dcomnav_signup"><button
-                            type="submit" class="Button__DefaultButton-sc-1e82yhp-0 SignUp" aria-label="Sign Up"
-                            href="https://login.blockchain.com/#/signup?showWallet?utm_campaign=dcomnav_signup">
-                            Sign Up
-                        </button></a>
+                        </button>
+                    </form>
+                    <form action="{% url 'app:logout' %}" method="post">
+                        {% csrf_token %}
+
+                        <button type="submit" class="SignUp" aria-label="Sign Up">
+                            Log Out
+                        </button>
+                     </form>
+                    
                 </ul>
             </div>
         </div>
@@ -116,7 +121,7 @@
                     </div>
                 </div>
                 <!-- Portfolio Item 2-->
-              
+
                 <!-- Portfolio Item 3-->
                 <div class="col-md-6 col-lg-4 mb-5">
                     <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
@@ -129,11 +134,11 @@
                     </div>
                 </div>
                 <!-- Portfolio Item 4-->
-              
+
                 <!-- Portfolio Item 5-->
-              
+
                 <!-- Portfolio Item 6-->
-               
+
             </div>
         </div>
     </section>
@@ -201,7 +206,7 @@
                             <div class="form-group floating-label-form-group controls mb-0 pb-2">
                                 {% csrf_token %}
                                 <label>Email </label>
-                                {% render_field contact_form.email class+="form-control"  %}
+                                {% render_field contact_form.email class+="form-control" %}
 
                                 <p class="help-block text-danger"></p>
                             </div>
@@ -210,7 +215,7 @@
                             <div class="form-group floating-label-form-group controls mb-0 pb-2">
                                 {% csrf_token %}
                                 <label>Teléfono</label>
-                                {% render_field contact_form.telefono class+="form-control"  %}
+                                {% render_field contact_form.telefono class+="form-control" %}
 
                                 <p class="help-block text-danger"></p>
                             </div>
@@ -218,7 +223,7 @@
                         <div class="control-group">
                             <div class="form-group floating-label-form-group controls mb-0 pb-2">
                                 <label>Mensaje</label>
-                                {% render_field contact_form.mensaje class+="form-control"  %}
+                                {% render_field contact_form.mensaje class+="form-control" %}
 
                                 <p class="help-block text-danger"></p>
                             </div>
