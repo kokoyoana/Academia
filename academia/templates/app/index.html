@@ -40,14 +40,14 @@
                             Log In
                         </button>
                     </form>
-                    <form action="{% url 'app:logout' %}" method="post">
-                        {% csrf_token %}
+                    <nav class="mb-3">
+                        {% if user.is_authenticated %}
+                        <form action="{% url 'app:logout' %}" method="post">
+                            {% csrf_token %}
+                            <button class="btn btn-primary btn-sm" type="submit">Log Out</button>
+                        </form>
+                        {% endif %}
 
-                        <button type="submit" class="SignUp" aria-label="Sign Up">
-                            Log Out
-                        </button>
-                     </form>
-                    
                 </ul>
             </div>
         </div>
@@ -81,6 +81,10 @@
                 <div class="carousel-item">
                     <img src="{% static 'img/flayer.jpg' %}" alt="flayer">
                 </div>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon flecha" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
 
             <!-- Left and right controls -->

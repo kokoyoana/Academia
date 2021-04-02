@@ -450,6 +450,7 @@ a > code {
 
 .carousel-inner img {
   height: 450px;
+ background-color: #05406D;
 }
    
 
@@ -478,7 +479,13 @@ button:hover {
   opacity: 0.8;
 }
 
-
+span.flecha{
+  background-color: orange;
+  color:#D67B1E;
+}
+span.carousel-control-prev-icon{
+  background-color: #D67B1E;
+}
 
 
 
@@ -494,4 +501,5 @@ span.psw {
   span.psw {
      display: block;
      float: none;
-  }
+}
+}
