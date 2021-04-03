@@ -29,6 +29,9 @@ $(document).ready(llamadaApi);
 
 
 
+
+
+
 /* 
     fetch(url,{
         method: 'get',
@@ -49,6 +52,9 @@ $(document).ready(llamadaApi);
 }
 callApy();
  */
+
+
+
 
 
 

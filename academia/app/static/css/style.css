@@ -446,15 +446,6 @@ a > code {
   width: 100%;
 } */
 
-
-
-.carousel-inner img {
-  height: 450px;
-  width: 50%;
- background-color: #05406D;
-}
-   
-
 form{
 text-decoration: none;  
 }
@@ -487,6 +478,10 @@ span.flecha{
 span.carousel-control-prev-icon{
   background-color: #D67B1E;
 }
+span.carousel-control-next-icon{
+  color: #D67B1E;
+  background-color: #D67B1E;
+}
 
 
 span.psw {
@@ -501,3 +496,22 @@ span.psw {
      float: none;
 }
 }
+
+
+
+
+
+.carousel-inner img {
+  height: 400px;
+   width: 50%;
+   margin:auto;
+   
+}
+
+
+
+
+
+
+
+
