@@ -145,7 +145,10 @@ a.dorado {
     display: inline-block;
     text-align: center;
 }
-
+div .logo {
+    flex: 1 0 17.666667%;
+    max-width: 18.999999%;
+}
 .menu-left li a {
     display: inline;
     padding-left: 15px;
@@ -322,13 +325,16 @@ span.carousel-control-next-icon{
 }
 
 .carousel-inner img {
-  height: 500px;
-   margin:auto;
+ height: 625px;
+margin: auto;
+   
    
 }
 div.carousel-inner {
-  height: 500px;
-   margin:auto;
+ 
+height: 625px;
+margin: auto;
+ 
    
 }
 .carousel-inner{
@@ -336,12 +342,10 @@ div.carousel-inner {
   height: auto;
 }
 div .flayer{
-  height: 500px;
+    height: 633px;
+    width: 663px;
 }
-div .logo {
-    flex: 1 0 17.666667%;
-    max-width: 18.999999%;
-}
+
 .carousel-caption {
 text-align: center;
 font-size: 50px;
@@ -421,4 +425,9 @@ text-align: center !important;
 }
 .divider-custom.divider-light .divider-custom-icon {
   color: #fff !important;
+}
+
+
+.loginForm{
+text-decoration: none;  
 }
