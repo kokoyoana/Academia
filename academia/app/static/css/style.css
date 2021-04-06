@@ -326,6 +326,15 @@ span.carousel-control-next-icon{
    margin:auto;
    
 }
+div.carousel-inner {
+  height: 500px;
+   margin:auto;
+   
+}
+.carousel-inner{
+  margin-top: 200px;
+  height: auto;
+}
 div .flayer{
   height: 500px;
 }
@@ -344,7 +353,7 @@ text-align: center !important;
 
 
 .page-section {
-  padding: 12rem 0;
+  padding: 6rem 0;
 }
 .page-section .page-section-heading {
   font-size: 2.25rem;
