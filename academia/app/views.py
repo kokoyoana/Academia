@@ -12,6 +12,9 @@ from random import choices
 from django.db.models import Avg
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login,logout
+#EN COSTRUCCION POR RA
+from django.urls import reverse_lazy
+from django.contrib.auth.views import LoginView
 
 
 # Create your views here.
@@ -117,20 +120,36 @@ class Quien(TemplateView):
 
 
 
-         
-def login_view(request):
-    if request.method == 'POST':
-        form = AuthenticationForm(data=request.POST)
-        if form.is_valid():
-            return redirect('app:curso')
-    else:
-        form = AuthenticationForm()
-    return render(request, 'app/login.html', {'form': form})
+"""
+clase que maneja el login
+
+--->Determinar plantilla de login:logrado
+--->Determinar redireccionamiento en caso de un login valido:en_proceso
+"""         
+class Login_View(LoginView):
+    template_name = 'app/login.html'
+    fields = '__all__'
+    redirect_authenticated_user = True
+
+    def get_success_url(self):
+        return reverse_lazy('inicio')
+
+  
+
+
+
+
+
+"""
+IMPORTANTE!!!
+La funcionalidad del logout sera manejada por una clase 
+que se definira en urls.py
 
 def logout_view(request):
     if request.method == 'POST':
         logout(request)
         return redirect('app:inicio')
+"""    
  
 
 

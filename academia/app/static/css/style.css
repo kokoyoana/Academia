@@ -6,6 +6,25 @@
 }
 
 
+
+@media (min-width: 1200px){
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+  max-width: 1255px !important;
+   
+  }
+}
+@media (min-width: 1200px){
+div.Contacarrousel{
+  max-width: 1153px;
+   
+  }
+}
+@media (min-width: 1200px){
+.container.ContaDestacados{
+    max-width: 1160px;
+   
+  }
+}
 /* esta es la parte que adapta las img */
 .imagen{
   -o-object-fit: cover;
@@ -146,8 +165,8 @@ a.dorado {
     text-align: center;
 }
 div .logo {
-    flex: 1 0 17.666667%;
-    max-width: 18.999999%;
+    flex: 0 0 35.666667%;
+    max-width: 10.999999%;
 }
 .menu-left li a {
     display: inline;
@@ -155,6 +174,25 @@ div .logo {
     padding-right: 15px;
 }
 
+.mb-5, .my-5 {
+    margin-bottom: 3rem!important;
+}
+div.col-5 {
+    -ms-flex: 0 0 41.666667%;
+    flex: 0 0 45.666667%;
+    max-width: 84.666667%;
+}
+.carousel-caption.tituloD {
+    position: absolute;
+    right: -36%;
+    top: 208px;
+    left: 0%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #001A37;
+    text-align: center;
+}
 /* fin navbar derecho */
 
 .menuD {
@@ -430,4 +468,36 @@ text-align: center !important;
 
 .loginForm{
 text-decoration: none;  
+}
+
+
+div .row{
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+   
+}
+.row{
+  text-align: center;
+width: 1246px;
+}
+div.esta{
+  margin-left: 55px;
+}
+
+
+
+div .img-fluid {
+    max-width: 100%;
+    width: 314.750px;
+    height: 314.750px;
+}
+img {
+    border-style: none;
+    width: 300px;
+    height: auto;
+}
+  .product-block{
+  margin-left: 200px;
+
 }

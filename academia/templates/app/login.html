@@ -2,12 +2,13 @@
 {% block content %}
 <div class=" marginAviso text-center ">
   <h1 class="mb-4">Log In</h1>
-    <form action="/login/" method="post" class="loginForm">
+    <form method="post" class="loginForm">
         {% csrf_token %}
-        {{ form }}
+        {{ form.as_p }}
         <input type="submit" value="Log In">
     </form>
 </div>
+
 
 
 </div>
