@@ -24,11 +24,11 @@
                         <li><a class="active dorado " href="{% url 'app:inicio' %}">INICIO</a></li>
                           <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
-                            CURSOS
+                             <a class="dorado" href="{% url 'app:curso' %}">CURSOS</a>
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             {% for curso in cursos %}
-                            <a class="dropdown-item" href="">{{ curso.nombre }}</a>
+                            <a class="dropdown-item" href="{% url 'app:infocurso' curso.id %}">{{ curso.nombre }}</a>
 
                             {% endfor %}
 
@@ -59,7 +59,8 @@
 
                         <button class=" hide btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
-                            CURSOS
+                            <a class="" href="{% url 'app:curso' %}">CURSOS</a>
+
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             {% for curso in cursos %}

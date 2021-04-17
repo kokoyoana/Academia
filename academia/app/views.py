@@ -68,7 +68,6 @@ class Cursos(TemplateView):
 
     def get_context_data(self,**kwargs):
         context=super(Cursos, self).get_context_data(**kwargs) 
-   
         context['cursos']= Curso.objects.all()
 
         return context
@@ -120,7 +119,6 @@ class Quien(TemplateView):
 
     def get_context_data(self,**kwargs):
         context=super(Quien, self).get_context_data(**kwargs) 
-   
         context['cursos']= Curso.objects.all()
 
         return context
@@ -152,8 +150,10 @@ class InfoCurso(DetailView):
         context=super(InfoCurso, self).get_context_data(**kwargs)
         idCur = self.kwargs.get('pk',None)
         context['infocurso']= Curso.objects.get(pk = idCur)
-  
+        context['cursos']= Curso.objects.all()
 
+  
+        return context
 
 
 
