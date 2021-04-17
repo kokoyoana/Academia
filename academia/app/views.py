@@ -134,6 +134,16 @@ class Login_View(LoginView):
     def get_success_url(self):
         return reverse_lazy('inicio')
 
+
+
+class InfoCurso(DetailView):
+    template_name = 'app/infocurso.html'
+    model = Curso
+
+    def get_context_data(self,**kwargs):
+        context=super(InfoCurso, self).get_context_data(**kwargs)
+        idCur = self.kwargs.get('pk',None)
+        context['infocurso']= Curso.objects.get(pk = idCur)
   
 
 

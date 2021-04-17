@@ -22,14 +22,18 @@
                 <div class="col-5 menu-left displayLeft mb-5">
                     <ul class="navbar-nav ml">
                         <li><a class="active dorado " href="{% url 'app:inicio' %}">INICIO</a></li>
+                          <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            CURSOS
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            {% for curso in cursos %}
+                            <a class="dropdown-item" href="">{{ curso.nombre }}</a>
+
+                            {% endfor %}
+
+                        </div>
                         <li><a href="{% url 'app:quien' %}" class="dorado mr-3">CONÓCENOS</a></li>
-
-                        <li class="listArrow"><a class="dorado" href="{% url 'app:curso' %}">CURSOS</a>
-                            <ul>
-
-                                <li><a href="">lISTA</a></li>
-                            </ul>
-                        </li>
                     </ul>
                 </div>
                 <div class="col-2 logo ">
@@ -51,28 +55,32 @@
 
                             <li class="hide nav-item"><a class="active dorado" href="{% url 'app:inicio' %}">INICIO</a>
                             </li>
-                            <li class="hide nav-item"><a href="{% url 'app:quien' %}" class="dorado">CONÓCENOS</a></li>
+                         <li class="hide nav-item"><a href="{% url 'app:quien' %}" class="dorado">CONÓCENOS</a></li>
 
-                            <li class="hide listArrow nav-item"><a class="dorado"
-                                    href="{% url 'app:curso' %}">CURSOS</a>
-                                <ul>
+                        <button class=" hide btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            CURSOS
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            {% for curso in cursos %}
+                            <a class="dropdown-item" href="{% url 'app:infocurso' curso.id %}">{{ curso.nombre }}</a>
+                            {% endfor %}
 
-                                    <li><a href="">LISTA</a></li>
-
-                                </ul>
-                            </li>
+                        </div>
                             <li class="nav-item"><a class="dorado" href="{% url 'app:contactos' %}">CONTACTO</a></li>
                             <li class="nav-item">
                                 <form action="{% url 'app:login' %}" method="post">
                                     {% csrf_token %}
+
 
                             <li class="nav-item"><button type="submit" class="SignUp" aria-label="Sign Up"><a
                                         href="{% url 'app:login' %}"></a>
                                     Log In
                                 </button>
                                 </form>
+
                             </li>
-                            hola
+                            
                             <!-- <li class="nav-item">
                                 <form action="{% url 'app:logout' %}" method="post">
                                     {% csrf_token %}
