@@ -118,6 +118,14 @@ class Quien(TemplateView):
     template_name='app/quienes.html'
 
 
+    def get_context_data(self,**kwargs):
+        context=super(Quien, self).get_context_data(**kwargs) 
+   
+        context['cursos']= Curso.objects.all()
+
+        return context
+
+
 
 
 """
