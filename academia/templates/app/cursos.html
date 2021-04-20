@@ -2,81 +2,58 @@
 {% block content %}{% load widget_tweaks %}
  <section class="page-section portfolio" id="cursos">
         <div class="container">
+          {% for p in cursos%}
             <!-- Portfolio Section Heading-->
-            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Cursos</h2>
+            <h2 class="page-section-heading MARGENSECTION text-center text-uppercase text-secondary mb-4">{{ p.nombre }}</h2>
             <!-- Icon Divider-->
-            <div class="divider-custom">
-               
-            </div>
+            
             <!-- Portfolio Grid Items-->
-            <div class="row justify-content-center imagen">
-                <!-- Portfolio Item 1-->
-                <div class="col-md-6 col-lg-4 mb-5">
-                    <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#Modal1">
-                        <div
-                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="portfolio-item-caption-content text-center text-white"><i
-                                    class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        <img class="img-fluid" src={% static 'img/operar.jpg' %} alt="" />
-                    </div>
-                </div>
-                <!-- Portfolio Item 2-->
-                <div class="col-md-6 col-lg-4 mb-5">
-                    <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
-                        <div
-                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="portfolio-item-caption-content text-center text-white"><i
-                                    class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        <img class="img-fluid" src={% static 'img/trading.jpg' %} alt="trading" />
-                    </div>
-                </div>
-                <!-- Portfolio Item 3-->
-                <div class="col-md-6 col-lg-4 mb-5">
-                    <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
-                        <div
-                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="portfolio-item-caption-content text-center text-white"><i
-                                    class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        <img class="img-fluid" src={% static 'img/analysis.webp' %} alt="" />
-                    </div>
-                </div>
-                <!-- Portfolio Item 4-->
-                <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
-                    <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4">
-                        <div
-                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="portfolio-item-caption-content text-center text-white"><i
-                                    class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        <img class="img-fluid" src={% static 'img/monedas.webp' %} alt="" />
-                    </div>
-                </div>
-                <!-- Portfolio Item 5-->
-                <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
-                    <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5">
-                        <div
-                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="portfolio-item-caption-content text-center text-white"><i
-                                    class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        <img class="img-fluid" src="{% static 'img/velas.jpg' %}" alt="" />
-                    </div>
-                </div>
-                <!-- Portfolio Item 6-->
-                <div class="col-md-6 col-lg-4 ">
-                    <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6">
-                        <div
-                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="portfolio-item-caption-content text-center text-white"><i
-                                    class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        <img class="img-fluid" src="{% static 'img/grafico.webp' %}" alt="" />
-                    </div>
-                </div>
-            </div>
-        </div>
+              <div class="row cols-md-6  row-col-xs-12">
+          <!-- Video -->
+          <div class="embed-responsive embed-responsive-16by9 mb-4" style="margin-left: 10px;">{% autoescape off %}
+            <iframe
+              class="embed-responsive-item"
+              src="{{ p.video2 }}"
+             
+            ></iframe>{% endautoescape %}
+          </div>
+           </div>
+            {% endfor %}
+      </div>
     </section>
+
+<footer class="footer">
+    <div class="container cf">
+      <div class="row pie">
+       
+        <div class="col-sm-3">
+          <h4 class="title">Contactanos</h4>
+          <span class="acount-icon">
+            <a href="#"><i class="fas fa-phone"></i></i> 664195674</a>
+            <a href="https://wa.me/664195674"><i class="fab fa-whatsapp"></i> Whatsapp</i></a>
+            <a href="#"><i class="fas fa-envelope-square"></i></i> NWF@gmail.com</a>
+          </span>
+        </div>
+        <div class="col-sm-3 columnas">
+          <h4 class="title">Privacidad</h4>
+          <div class="category">
+            <a href="#">Aviso legal</a>
+            <a href="#">Cookies</a>
+
+          </div>
+        </div>
+        <div class="col-sm-3 Fpagos">
+          <h4 class="title">Payment</h4>
+          <p>Compra con seguridad</p>
+          <ul class="payment">
+            <li><a href="#"><i class="fa fa-credit-card" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-paypal" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-cc-visa" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+
+    </div>
+  </footer>
 {% endblock content %}

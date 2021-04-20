@@ -67,8 +67,10 @@ class Cursos(TemplateView):
     model = Curso
 
     def get_context_data(self,**kwargs):
-        context=super(Cursos, self).get_context_data(**kwargs) 
+        context=super(Cursos, self).get_context_data(**kwargs)
         context['cursos']= Curso.objects.all()
+        
+        
 
         return context
 

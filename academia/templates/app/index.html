@@ -160,7 +160,7 @@
             <div class="">
                 <div class="col-md-7 heading-section ftco-animate text-center fadeInUp ftco-animated mrRespon"
                     style="margin: auto;">
-                    <h2 class="mb-5 parrafos ">Nuestros Cursos</h2>
+                    <h2 class="mb-5 parrafos">Nuestros Cursos</h2>
 
                 </div>
             </div>
@@ -169,13 +169,13 @@
                 {% for curso in cursos %}
                 <div class="col-md-3 col-6 product-block">
 
-                    <a href="{% url 'app:infocurso' curso.id %}"><img class="img-fluid img-portfolio img-hover CentraImagen mb-3"
+                    <a href="{% url 'app:infocurso' curso.id %}"><img class="img-fluid  mb-3"style="border-radius: 20px;"
                             src="{{ curso.imagen.url }}">
                         <hr>
                         <div class="caption">
                             <h3><a href="{% url 'app:infocurso' curso.id %}"> {{ curso.nombre }} </a></h3>
-                            <div class=" caption price-mob">
-                                {{ curso.precio }}$
+                            <div class=" caption price-mob ">
+                                {{ curso.precio }}€
                             </div>
                             <div class="clearfix"></div>
 
@@ -206,16 +206,13 @@
             <!-- About Section Content-->
             <div class="row">
                 <div class="col-lg-4 ml-auto">
-                    <p class="lead">Somos una academia de Trading de Republica Dominicana fundada en el año 2018 y una
-                        segunda sucursal en Madrid(España) fundada en el año 2020.</p>
+                    <p class="lead">Somos una academia de trading con un sistema educativo innovador, dividido en clases teóricas-practicas que te permitirán empezar desde cero hasta llegar a ser un trader profesional.</p>
                 </div>
                 <div class="col-lg-4 mr-auto">
-                    <p class="lead">Nos encargamos de la formación profesional en el ámbito de las inversiones en el
-                        mercado de Forex y Criptomonedas.</p>
+                    <p class="lead">El objetivo de la academia es que el alumno aprenda a analizar y a estudiar como se mueve el mercado y como invertir en el de manera eficaz,aplicando las estrategías adecuadas.</p>
                 </div>
                 <div class="col-lg-4 mr-auto">
-                    <p class="lead">Lo que nos diferencia de las demás academias es que una vez alcanzada tu
-                        rentabilidad podras pertenecer a nuestro equipo de trabajo.</p>
+                    <p class="lead">Además del factor que nos hace diferenciarnos al resto,nuestros estudiantes al lograr la rentabilidad podran pertenecer a nuestro equipo de trabajo.</p>
                 </div>
             </div>
             <!-- About Section Button-->
@@ -230,7 +227,7 @@
     <section class="page-section" id="contact">
         <div class="container">
             <!-- Contact Section Heading-->
-            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contáctanos</h2>
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">¿Alguna Pregunta?</h2>
             <!-- Icon Divider-->
             <div class="divider-custom">
                 <div class="divider-custom-icon"><a href="https://wa.me/664195674"><i class="fab fa-whatsapp"></i></a>
@@ -288,7 +285,9 @@
     </section>
 
 
-      <footer class="footer">
+
+ <!-- Footer Section-->
+<footer class="footer">
     <div class="container cf">
       <div class="row pie">
        

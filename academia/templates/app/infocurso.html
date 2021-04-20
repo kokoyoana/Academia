@@ -1,0 +1,64 @@
+{% extends 'app/index.html' %} {% load static %} {% load bootstrap4 %}
+{% block content%}
+
+
+
+     <div class="container marginAviso">
+      <div class="row align-items-center ml-5 mb-5">
+        
+      
+        
+
+        <div class="col-md-5 mrRespon">
+
+          <p class="font-weight text-justify parracursos ">{% autoescape off %}
+            {{infocurso.texto}}
+          </p>{% endautoescape %}
+
+        </div>
+        <div class="col-md-6 ">
+          <img style="border-radius: 20px;" src="{{ infocurso.imagen.url }}" style="width:150%;" class="mb-3" alt="imagen" />
+
+      </div>
+      
+     <i class="fas fa-cart-arrow-down fa-2x"></i>
+      </div>
+     </div>
+
+
+<footer class="footer">
+    <div class="container cf">
+      <div class="row pie">
+       
+        <div class="col-sm-3">
+          <h4 class="title">Contactanos</h4>
+          <span class="acount-icon">
+            <a href="#"><i class="fas fa-phone"></i></i> 664195674</a>
+            <a href="https://wa.me/664195674"><i class="fab fa-whatsapp"></i> Whatsapp</i></a>
+            <a href="#"><i class="fas fa-envelope-square"></i></i> NWF@gmail.com</a>
+          </span>
+        </div>
+        <div class="col-sm-3 columnas">
+          <h4 class="title">Privacidad</h4>
+          <div class="category">
+            <a href="#">Aviso legal</a>
+            <a href="#">Cookies</a>
+
+          </div>
+        </div>
+        <div class="col-sm-3 Fpagos">
+          <h4 class="title">Payment</h4>
+          <p>Compra con seguridad</p>
+          <ul class="payment">
+            <li><a href="#"><i class="fa fa-credit-card" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-paypal" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-cc-visa" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+
+    </div>
+  </footer>
+
+{% endblock content%}

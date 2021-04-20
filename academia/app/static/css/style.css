@@ -151,7 +151,7 @@ div.Contacarrousel{
 
 
 a.dorado:hover {
-  color:#ba9237 !important;
+  color:#D77A1D !important;
 }
 
 
@@ -395,7 +395,11 @@ text-align: center !important;
 
 
 .page-section {
-  padding: 12rem 0;
+  padding: 6rem 0;
+}
+.MARGENSECTION{
+  padding: 3rem 0;
+
 }
 .page-section .page-section-heading {
   font-size: 2.25rem;
@@ -502,7 +506,7 @@ img {
 
 }
 
-
+/*----------------------Start Footer-------------------------*/
 .footer {
     padding: 50px 0 20px 0;
     background-color: #05406D;
@@ -579,4 +583,23 @@ div.col-sm-3.Fpagos {
 div.row.pie{
   text-align:left;
   padding-left: 150px;
+}
+/*----------------------FIN FOOTER-------------------------*/
+
+
+/*----------------------START TEMPLATES INFOCURSOS-----------*/
+
+.parracursos{
+  font-size: 18px;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.parrafos{
+  font-size: 50px;
+}
+.price-mob{
+    font-size: 30px;
+}
+p.lead{
+      font-size: 25px;
+
 }
