@@ -395,7 +395,7 @@ text-align: center !important;
 
 
 .page-section {
-  padding: 6rem 0;
+  padding: 12rem 0;
 }
 .page-section .page-section-heading {
   font-size: 2.25rem;
@@ -500,4 +500,83 @@ img {
   .product-block{
   margin-left: 200px;
 
+}
+
+
+.footer {
+    padding: 50px 0 20px 0;
+    background-color: #05406D;
+    color: #878c94;
+}
+.footer .title{
+	text-align: left;
+	color:#fff;
+	font-size:25px;
+}
+.footer .social-icon{
+	padding:0px;
+	margin:0px;
+}
+.footer .social-icon a{
+	display:inline-block;
+	color:#fff;
+	font-size:25px;
+	padding:5px;
+}
+.footer .acount-icon a{
+	display:block;
+	color:#fff;
+	font-size:18px;
+	padding:5px;
+	text-decoration:none;
+}
+.footer .acount-icon .fa{
+	margin-right:25px;
+}
+.footer .category a {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    padding: 5px 20px;
+    margin: 1px;
+    border-radius:4px;
+    margin-top: 6px;
+    background-color: black;
+    border: solid 1px #fff;
+}
+.footer .payment{
+	margin:0px;
+	padding:0px;
+	list-style-type:none
+}
+.footer .payment li{
+	list-style-type:none
+}
+.footer .payment li a {
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    float:left;
+    font-size: 25px;
+    padding: 10px 10px;
+}
+
+div.col-sm-3.columnas {
+    -ms-flex: 0 0 25%;
+    flex: 2 0 29%;
+    max-width: 32%;
+    padding-left: 114px;
+    padding-right: 0px;
+}
+
+div.col-sm-3.Fpagos {
+    -ms-flex: 0 0 25%;
+    flex: 2 0 29%;
+    max-width: 30%;
+    padding-left: 160px;
+    padding-right: 0px;
+}
+div.row.pie{
+  text-align:left;
+  padding-left: 150px;
 }

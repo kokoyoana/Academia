@@ -22,9 +22,9 @@
                 <div class="col-5 menu-left displayLeft mb-5">
                     <ul class="navbar-nav ml">
                         <li><a class="active dorado " href="{% url 'app:inicio' %}">INICIO</a></li>
-                          <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
-                             <a class="dorado" href="{% url 'app:curso' %}">CURSOS</a>
+                            <a class="dorado" href="{% url 'app:curso' %}">CURSOS</a>
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             {% for curso in cursos %}
@@ -40,7 +40,7 @@
                     <a href="{% url 'app:inicio' %}"><img class="mx-auto mb-3 logoIMG"
                             src="{% static 'img/logo2.png' %}" width="140px;" alt="logo" /></a>
                 </div>
-                
+
 
                 <nav class="col navbar navbar-expand-xl justify-content-end menuDrch">
                     <!-- Toggler/collapsibe Button -->
@@ -56,45 +56,57 @@
 
                             <li class="hide nav-item"><a class="active dorado" href="{% url 'app:inicio' %}">INICIO</a>
                             </li>
-                         <li class="hide nav-item"><a href="{% url 'app:quien' %}" class="dorado">CONÓCENOS</a></li>
+                            <li class="hide nav-item"><a href="{% url 'app:quien' %}" class="dorado">CONÓCENOS</a></li>
 
-                        <button class=" hide btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            <a class="" href="{% url 'app:curso' %}">CURSOS</a>
+                            <button class=" hide btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="" href="{% url 'app:curso' %}">CURSOS</a>
 
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            {% for curso in cursos %}
-                            <a class="dropdown-item" href="{% url 'app:infocurso' curso.id %}">{{ curso.nombre }}</a>
-                            {% endfor %}
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                {% for curso in cursos %}
+                                <a class="dropdown-item"
+                                    href="{% url 'app:infocurso' curso.id %}">{{ curso.nombre }}</a>
+                                {% endfor %}
 
-                        </div>
+                            </div>
                             <li class="nav-item"><a class="dorado" href="{% url 'app:contactos' %}">CONTACTO</a></li>
                             <li class="nav-item">
-                                <form action="{% url 'app:login' %}" method="post">
+                                <form action="{% url 'account_login' %}" method="post">
                                     {% csrf_token %}
 
 
                             <li class="nav-item"><button type="submit" class="SignUp" aria-label="Sign Up"><a
-                                        href="{% url 'app:login' %}"></a>
+                                        href="{% url 'account_login' %}"></a>
                                     Log In
                                 </button>
                                 </form>
 
                             </li>
-                            
-                            <!-- <li class="nav-item">
-                                <form action="{% url 'app:logout' %}" method="post">
+                            <li class="nav-item">
+                                <form action="{% url 'account_logout' %}" method="post">
                                     {% csrf_token %}
-                                    <button class="btn btn-primary btn-sm" type="submit">Log Out</button>
-                                </form>
-                            </li> -->
 
+
+                            <li class="nav-item"><button type="submit" class="SignUp" aria-label="Sign Up"><a
+                                        href="{% url 'account_logout' %}"></a>
+                                    Log Out
+                                </button>
+                                </form>
+
+                            </li>
+                           
+                            
+
+
+                            </i>
+
+                            
                         </ul>
 
                     </div>
                 </nav>
-                
+
             </div>
 
         </div>
@@ -154,16 +166,16 @@
             </div>
 
             <div class="row filaDestacados">
-                {% for p in cursos %}
+                {% for curso in cursos %}
                 <div class="col-md-3 col-6 product-block">
 
-                    <a href=""><img class="img-fluid img-portfolio img-hover CentraImagen mb-3"
-                            src="{{ p.imagen.url }}">
+                    <a href="{% url 'app:infocurso' curso.id %}"><img class="img-fluid img-portfolio img-hover CentraImagen mb-3"
+                            src="{{ curso.imagen.url }}">
                         <hr>
                         <div class="caption">
-                            <h3><a href=""> {{ p.nombre }} </a></h3>
+                            <h3><a href="{% url 'app:infocurso' curso.id %}"> {{ curso.nombre }} </a></h3>
                             <div class=" caption price-mob">
-                                {{ p.precio }}$
+                                {{ curso.precio }}$
                             </div>
                             <div class="clearfix"></div>
 
@@ -221,7 +233,8 @@
             <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contáctanos</h2>
             <!-- Icon Divider-->
             <div class="divider-custom">
-         <div class="divider-custom-icon"><a href="https://wa.me/664195674"><i class="fab fa-whatsapp"></i></a></div>
+                <div class="divider-custom-icon"><a href="https://wa.me/664195674"><i class="fab fa-whatsapp"></i></a>
+                </div>
             </div>
             <!-- Contact Section Form-->
             <div class="row">
@@ -273,6 +286,42 @@
             </div>
         </div>
     </section>
+
+
+      <footer class="footer">
+    <div class="container cf">
+      <div class="row pie">
+       
+        <div class="col-sm-3">
+          <h4 class="title">Contactanos</h4>
+          <span class="acount-icon">
+            <a href="#"><i class="fas fa-phone"></i></i> 664195674</a>
+            <a href="https://wa.me/664195674"><i class="fab fa-whatsapp"></i> Whatsapp</i></a>
+            <a href="#"><i class="fas fa-envelope-square"></i></i> NWF@gmail.com</a>
+          </span>
+        </div>
+        <div class="col-sm-3 columnas">
+          <h4 class="title">Privacidad</h4>
+          <div class="category">
+            <a href="#">Aviso legal</a>
+            <a href="#">Cookies</a>
+
+          </div>
+        </div>
+        <div class="col-sm-3 Fpagos">
+          <h4 class="title">Payment</h4>
+          <p>Compra con seguridad</p>
+          <ul class="payment">
+            <li><a href="#"><i class="fa fa-credit-card" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-paypal" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-cc-visa" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+
+    </div>
+  </footer>
 
     {% endblock content %}
 

@@ -21,14 +21,15 @@ from app import views
 from django.conf.urls import include, url
 from django.contrib.staticfiles.urls import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-
+from django.views.generic import TemplateView
 
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include(('app.urls','app'))),   
-
+    url(r'^accounts/', include('allauth.urls')),    #nueva linea
+    url(r'^$', TemplateView.as_view(template_name='index.html'), name='inicio')
 ]
 urlpatterns += staticfiles_urlpatterns()
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

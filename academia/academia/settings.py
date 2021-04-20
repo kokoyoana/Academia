@@ -37,10 +37,21 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'widget_tweaks',
     'bootstrap4',
     'app',
+    'allauth', 	 # nueva linea
+    'allauth.account',  	# nueva linea
+    'allauth.socialaccount',    	# nueva linea
+    'crispy_forms' , 
 ]
+
+SITE_ID = 1
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+ACCOUNT_LOGOUT_REDIRECT_URL = '/accounts/login/'
+LOGIN_REDIRECT_URL = '/cursos'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -71,7 +82,10 @@ TEMPLATES = [
     },
 ]
 
+
 WSGI_APPLICATION = 'academia.wsgi.application'
+
+
 
 
 # Database
@@ -89,6 +103,11 @@ DATABASES = {
         }
     }
 }
+
+AUTHENTICATION_BACKENDS = (
+        'django.contrib.auth.backends.ModelBackend',
+        'allauth.account.auth_backends.AuthenticationBackend',
+    )
 
 
 # Password validation
@@ -113,7 +132,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es'
 
 TIME_ZONE = 'Europe/Berlin'
 
@@ -124,8 +143,13 @@ USE_L10N = True
 USE_TZ = True
 
 
+
+        
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
+
+
 
 STATIC_URL = '/static/'
 MEDIA_ROOT= os.path.join(BASE_DIR, 'media/')
