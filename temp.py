@@ -7,5 +7,7 @@ CREATED BY RA
 
 """
 Para el carrito:
+-->Usar una aplicacion prediseñada de Django
+-->Visualizar proceso...es un  CRUD?
 
 """
