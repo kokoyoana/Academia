@@ -1,59 +1,69 @@
 {% extends 'app/index.html'%} {% load static %} {% load bootstrap4 %}
 {% block content %}{% load widget_tweaks %}
- <section class="page-section portfolio" id="cursos">
-        <div class="container">
-          {% for p in cursos%}
-            <!-- Portfolio Section Heading-->
-            <h2 class="page-section-heading MARGENSECTION text-center text-uppercase text-secondary mb-4">{{ p.nombre }}</h2>
-            <!-- Icon Divider-->
-            
-            <!-- Portfolio Grid Items-->
-              <div class="row cols-md-6  row-col-xs-12">
-          <!-- Video -->
-          <div class="embed-responsive embed-responsive-16by9 mb-4" style="margin-left: 10px;">{% autoescape off %}
-            <iframe
-              class="embed-responsive-item"
-              src="{{ p.video2 }}"
-             
-            ></iframe>{% endautoescape %}
-          </div>
-           </div>
-            {% endfor %}
+<section class="page-section portfolio" id="cursos">
+  <div class="container">
+    {% for p in forex%}
+    <!-- Portfolio Section Heading-->
+    <!-- Icon Divider-->
+ 
+
+    <!-- Portfolio Grid Items-->
+    <div class="row cols-md-6  row-col-xs-12">
+      <!-- Video -->
+
+      <div class="embed-responsive embed-responsive-16by9 mb-4" style="margin-left: 10px;">{% autoescape off %}
+        {{ p.video1 }}
+        {% endautoescape %}
       </div>
-    </section>
+      <div class="embed-responsive embed-responsive-16by9 mb-4" style="margin-left: 10px;">{% autoescape off %}
+        {{ p.video2 }}
+        {% endautoescape %}
+      </div>
+       <div class="embed-responsive embed-responsive-16by9 mb-4" style="margin-left: 10px;">{% autoescape off %}
+        {{ p.video3 }}
+        {% endautoescape %}
+      </div>
+       <div class="embed-responsive embed-responsive-16by9 mb-4" style="margin-left: 10px;">{% autoescape off %}
+        {{ p.video4 }}
+        {% endautoescape %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
 
 <footer class="footer">
-    <div class="container cf">
-      <div class="row pie">
-       
-        <div class="col-sm-3">
-          <h4 class="title">Contactanos</h4>
-          <span class="acount-icon">
-            <a href="#"><i class="fas fa-phone"></i></i> 664195674</a>
-            <a href="https://wa.me/664195674"><i class="fab fa-whatsapp"></i> Whatsapp</i></a>
-            <a href="#"><i class="fas fa-envelope-square"></i></i> NWF@gmail.com</a>
-          </span>
-        </div>
-        <div class="col-sm-3 columnas">
-          <h4 class="title">Privacidad</h4>
-          <div class="category">
-            <a href="#">Aviso legal</a>
-            <a href="#">Cookies</a>
+  <div class="container cf">
+    <div class="row pie">
 
-          </div>
-        </div>
-        <div class="col-sm-3 Fpagos">
-          <h4 class="title">Payment</h4>
-          <p>Compra con seguridad</p>
-          <ul class="payment">
-            <li><a href="#"><i class="fa fa-credit-card" aria-hidden="true"></i></a></li>
-            <li><a href="#"><i class="fa fa-paypal" aria-hidden="true"></i></a></li>
-            <li><a href="#"><i class="fa fa-cc-visa" aria-hidden="true"></i></a></li>
-          </ul>
+      <div class="col-sm-3">
+        <h4 class="title">Contactanos</h4>
+        <span class="acount-icon">
+          <a href="#"><i class="fas fa-phone"></i></i> 664195674</a>
+          <a href="https://wa.me/664195674"><i class="fab fa-whatsapp"></i> Whatsapp</i></a>
+          <a href="#"><i class="fas fa-envelope-square"></i></i> NWF@gmail.com</a>
+        </span>
+      </div>
+      <div class="col-sm-3 columnas">
+        <h4 class="title">Privacidad</h4>
+        <div class="category">
+          <a href="#">Aviso legal</a>
+          <a href="#">Cookies</a>
+
         </div>
       </div>
-      <hr>
-
+      <div class="col-sm-3 Fpagos">
+        <h4 class="title">Payment</h4>
+        <p>Compra con seguridad</p>
+        <ul class="payment">
+          <li><a href="#"><i class="fa fa-credit-card" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-paypal" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-cc-visa" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
     </div>
-  </footer>
+    <hr>
+
+  </div>
+</footer>
 {% endblock content %}

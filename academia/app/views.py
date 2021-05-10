@@ -69,6 +69,10 @@ class Cursos(TemplateView):
     def get_context_data(self,**kwargs):
         context=super(Cursos, self).get_context_data(**kwargs)
         context['cursos']= Curso.objects.all()
+        context['forex']= Curso.objects.filter(forex = True)[:4]
+        context['cripto']= Curso.objects.filter(cripto = True)[:4]
+        context['otro']= Curso.objects.filter(otro = True)[:4]
+
         
         
 
